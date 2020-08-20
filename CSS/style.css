@@ -1,1 +1,12 @@
+<style>
+fieldset {
+  width: 310px;  
+}
 
+fieldset div { 
+  clear: both;
+}
+fieldset div label {
+  float: right;
+}
+</style>
