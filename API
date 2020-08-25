@@ -1,1 +1,53 @@
+var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() {
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+        anHttpRequest.open("GET", aUrl, true);
+        anHttpRequest.send(null);
+    }
+}
+var url = 'https://v2-api.sheety.co/8778343935bf73f939afc094c0a88b1f/apiCadastro/apiSenai';
+var client = new HttpClient();
+client.get(url, function(response) {
+    //var response1 = JSON.parse(response);
+    //alert(arrayJSON.map(keys, values));
+    document.getElementById("code").innerHTML = response1.code;
+    document.getElementById("codein").innerHTML = response1.codein;
+    document.getElementById("name").innerHTML = response1.name;
+    document.getElementById("high").innerHTML = response1.high;
+    document.getElementById("low").innerHTML = response1.low;
+    document.getElementById("varBid").innerHTML = response1.varBid;
+    document.getElementById("pctChange").innerHTML = response1.pctChange;
+    document.getElementById("bid").innerHTML = response1.bid;
+    document.getElementById("ask").innerHTML = response1.ask;
+    document.getElementById("timestamp").innerHTML = response1.timestamp;
+    document.getElementById("create_date").innerHTML = response1.create_date;
+});
 
+
+buildTable(response1);
+
+function buildTable() {
+    var table = document.getElementById('myTable')
+
+    for (var i = 0; i < response1.length; i++) {
+        var row = `<tr>
+                        <td>${response1[i].nome}</td>
+                        <td>${response1[i].sobrenome}</td>
+                        <td>${response1[i].telefone
+                        <td>${response1[i].e-mail}</td>
+                        <td>${response1[i].senha}</td>
+                        <td>${response1[i].varBid}</td>
+                        <td>${response1[i].pctChange}</td>
+                        <td>${response1[i].bid}</td>
+                        <td>${response1[i].ask}</td>
+                        <td>${response1[i].timestamp}</td>
+                        <td>${response1[i].create_date}</td>
+                    </tr>`
+
+        table.innerHTML += row
+    }
+}
