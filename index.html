@@ -1,74 +1,38 @@
-<html>
-  <head>
-    <title>FORMULARIO DE CADASTRO</title>
-    <link href="CSS/style.css" rel="stylesheet">
-  </head>
-  
-  <body>
-<form id="fipe" method="post" action="enviar" >
-  <div>
-     </div>
-  <div>
-    
-  </div>
-  <div>
-    
-  </div>
-  <fieldset id="veiculo" disabled="disabled">
-    <div>
-      <label>
-        Nome:
-        <input id="veiculo_valor" name="veiculo.valor" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        Sobrenome:
-        <input id="veiculo_marca" name="veiculo.marca" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        E-mail:
-        <input id="veiculo_modelo" name="veiculo.modelo" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        Idade:
-        <input id="veiculo_anomodelo" name="veiculo.anomodelo" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        Senha:
-        <input id="veiculo_combustivel" name="veiculo.combustivel" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        Telefone:
-        <input id="veiculo_codigofipe" name="veiculo.codigofipe" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-        CEP:
-        <input id="veiculo_mesreferencia" name="veiculo.mesreferencia" type="text" readonly>
-      </label>
-    </div>
-    <div>
-    <div>
-      <label>
-       Sexo:
-        <input id="veiculo_tipoveiculo" name="veiculo.tipoveiculo" type="text" readonly>
-      </label>
-    </div>
-    <div>
-      <label>
-       
-  </fieldset>  
-</form>
-      
-  </body>
-</html>      
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+          <div id="cadastro">
+            <form method="post" action=""> 
+              <h1>Cadastro</h1> 
+              <p> 
+                <label for="nome_cad">Seu nome</label>
+                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Jeferson" />
+              </p>
+              <p> 
+                <label for="sobrenome_cad">Seu sobrenome</label>
+                <input id="sobrenome_cad" name="sobrenome_cad" required="required" type="text" placeholder="Barbosa" />
+              </p>
+              <p> 
+                <label for="numero_cad">Seu número</label>
+                <input id="numero_cad" name="numero_cad" required="required" type="text" placeholder="11 954695414" />
+              </p>
+              <p> 
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="zecapagodinho@htmlecsspro.com"/> 
+              </p>
+              <p> 
+                <label for="senha_cad">Sua senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234"/>
+              </p>
+              <p> 
+                <input type="submit" value="Cadastrar"/> 
+              </p>
+            </form>
+</body>
+</html>
